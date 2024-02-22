@@ -1,0 +1,45 @@
+body {
+    background-color: #8C52FF;
+    font-family: Arial, sans-serif;
+    overflow-y: scroll; /* Adiciona uma barra de rolagem vertical */
+}
+
+.logo {
+    color: #FFFF00;
+    text-align: center;
+}
+
+.contain1, .contain2 {
+    contain: content;
+    background: grey;
+    color: #FFF;
+    padding: 15px;
+    text-align: center;
+    display: none;
+}
+
+#show-or-hide-snes {
+    background-color: #CFCFD2; /* Cor de fundo do botão */
+    border: none; /* Remove a borda do botão */
+    color: #5C3994; /* Cor do texto do botão */
+    padding: 15px 32px; /* Espaçamento interno do botão */
+    text-align: center; /* Alinhamento do texto */
+    text-decoration: none; /* Remove sublinhado do texto */
+    display: inline-block; /* Exibe o botão como um bloco */
+    font-size: 16px; /* Tamanho da fonte */
+    margin: 4px 2px; /* Margem externa do botão */
+    cursor: pointer; /* Altera o cursor para indicar que o botão é clicável */
+}
+
+#show-or-hide-md {
+    background-color: #212121;
+    border: none; /* Remove a borda do botão */
+    color: #A0A0A0; /* Cor do texto do botão */
+    padding: 15px 32px; /* Espaçamento interno do botão */
+    text-align: center; /* Alinhamento do texto */
+    text-decoration: none; /* Remove sublinhado do texto */
+    display: inline-block; /* Exibe o botão como um bloco */
+    font-size: 16px; /* Tamanho da fonte */
+    margin: 4px 2px; /* Margem externa do botão */
+    cursor: pointer; /* Altera o cursor para indicar que o botão é clicável */
+}
