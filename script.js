@@ -28,6 +28,42 @@ btnMega.addEventListener('click', function() {
     }
 });
 
+// Nintendo
+var btnNES = document.querySelector('#show-or-hide-nes');
+var containerNES = document.querySelector('.contain3');
+
+btnNES.addEventListener('click', function() {
+    if (containerNES.style.display === 'block') {
+        containerNES.style.display = 'none';
+    } else {
+        containerNES.style.display = 'block';
+    }
+});
+
+// Sega Master System
+var btnSMS = document.querySelector('#show-or-hide-sms');
+var containerSMS = document.querySelector('.contain4');
+
+btnSMS.addEventListener('click', function() {
+    if (containerSMS.style.display === 'block') {
+        containerSMS.style.display = 'none';
+    } else {
+        containerSMS.style.display = 'block';
+    }
+});
+
+// Playstation
+var btnPSOne = document.querySelector('#show-or-hide-psone');
+var containerPSOne = document.querySelector('.contain5');
+
+btnPSOne.addEventListener('click', function() {
+    if (containerPSOne.style.display === 'block') {
+        containerPSOne.style.display = 'none';
+    } else {
+        containerPSOne.style.display = 'block';
+    }
+});
+
 // Espaço para criar evento de lista de jogos
 // respeitando 2 linhas
 
@@ -37,6 +73,8 @@ btnMega.addEventListener('click', function() {
 //Obs: Sujeito a alterações
 
 
+
+// Função para chamar o jogo e ver no site HowLongToBeat
 function getGame(gameName){
     let url = 'https://www.howlongtobeat.com/api/search'
 
