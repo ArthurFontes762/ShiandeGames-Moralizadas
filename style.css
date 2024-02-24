@@ -1,7 +1,7 @@
 body {
     background-color: #8C52FF;
     font-family: Arial, sans-serif;
-    /* overflow-y: scroll; /* Adiciona uma barra de rolagem vertical */
+    overflow-y: scroll; /* Adiciona uma barra de rolagem vertical */
 }
 
 /* Estilo para a barra de navegação */
@@ -9,20 +9,27 @@ body {
     background-color: #854CD6; /* Cor de fundo */
     padding: 10px; /* Espaçamento interno */
     border-radius: 4px;
+    display: flex; /* Usa flexbox */
+    justify-content: space-between; /* Alinha os itens */
+    align-items: center; /* Alinha os itens verticalmente */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha em telas menores */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
 }
 
-/* Estilo para o título */
+/* Estilo para o título e para o logotipo */
 .title {
     display: flex; /* Usa flexbox para alinhar os itens */
     align-items: center; /* Alinha os itens verticalmente */
+    flex-grow: 1; /* Permite que o título cresça para preencher o espaço restante */
+    text-align: center;
 }
 
-/* Estilo para o logotipo */
-.logo {
+.title h1 {
     color: #FFFF00; /* Cor do texto */
     text-align: center;
-    margin-right: auto; /* Empurra o logotipo para a esquerda */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao texto */
 }
+
 
 /* Estilo para o campo de busca */
 #input-game {
@@ -30,12 +37,13 @@ body {
     font-size: 16px; /* Tamanho da fonte */
     border: 1px solid #ccc; /* Borda sólida */
     border-radius: 4px; /* Borda arredondada */
-    width: 300px; /* Largura do campo de busca */
+    width: 100%; /* Largura total */
+    max-width: 300px; /* Largura máxima */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
 }
 
 /* Estilo para o botão de busca */
 #btn-moralize {
-    margin: 10px;
     padding: 8px 16px; /* Espaçamento interno */
     font-size: 16px; /* Tamanho da fonte */
     background-color: #4CAF50; /* Cor de fundo */
@@ -43,7 +51,9 @@ body {
     border: none; /* Remove a borda */
     border-radius: 4px; /* Borda arredondada */
     cursor: pointer; /* Cursor de apontar */
-    transition: background-color 0.3s; /* Transição suave de cor de fundo */
+    transition: background-color 0.3s; /* Transição suave */
+    margin-left: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
 }
 
 /* Estilo para o botão de busca quando passa o mouse sobre ele */
@@ -59,87 +69,117 @@ body {
     padding: 15px;
     text-align: center;
     display: none;
+    margin: 0 auto; /* Centralizar o conteúdo horizontalmente */
+    max-width: 80%; /* Define a largura máxima */
+    border-radius: 15px; /* Adiciona bordas arredondadas */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona sombra */
+    animation: fadeIn 0.5s ease forwards; /* Adiciona animação de fade in */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* Botões SNES */
 #show-or-hide-snes {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao texto, ajuste conforme necessário */
     background-color: #CFCFD2;
     border: 1px solid #5C3994; /* Borda mais sólida */
     color: #5C3994;
-    padding: 15px 32px;
+    padding: 5px 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
+    margin: 10px auto; /* Centralizar e adicionar margem superior e inferior */
     cursor: pointer;
     border-radius: 8px; /* Menos arredondado */
     transition: background-color 0.3s, color 0.3s; /* Transição suave */
+    max-width: 200px; /* Define a largura máxima */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona sombra */
 }
 
 /* Botões Mega Drive */
 #show-or-hide-md {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao texto, ajuste conforme necessário */
     background-color: #212121;
     border: 1px solid #A0A0A0;
     color: #A0A0A0;
-    padding: 15px 32px;
+    padding: 5px 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
+    margin: 10px auto; /* Centralizar e adicionar margem superior e inferior */
     cursor: pointer;
     border-radius: 8px;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */
+    max-width: 200px; /* Define a largura máxima */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona sombra */
 }
 
 /* Botões Nintendo */
 #show-or-hide-nes {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); /* Adiciona sombra ao texto, ajuste conforme necessário */
     background-color: #E4000F;
     border: 1px solid #E9E2CF;
     color: #E9E2CF;
-    padding: 15px 32px;
+    padding: 5px 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
+    margin: 10px auto; /* Centralizar e adicionar margem superior e inferior */
     cursor: pointer;
     border-radius: 8px;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */
+    max-width: 200px; /* Define a largura máxima */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona sombra */
 }
 
 /* Botões Sega Master System */
 #show-or-hide-sms {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao texto, ajuste conforme necessário */
     background-color: #05040A;
     border: 1px solid #C2C6C9;
     color: #C2C6C9;
-    padding: 15px 32px;
+    padding: 5px 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
+    margin: 10px auto; /* Centralizar e adicionar margem superior e inferior */
     cursor: pointer;
     border-radius: 8px;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */
+    max-width: 200px; /* Define a largura máxima */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona sombra */
 }
 
 /* Botões Playstation */
 #show-or-hide-psone {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao texto, ajuste conforme necessário */
     background-color: #ADA9A8;
     border: 1px solid #484344;
     color: #484344;
-    padding: 15px 32px;
+    padding: 5px 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
+    margin: 10px auto; /* Centralizar e adicionar margem superior e inferior */
     cursor: pointer;
     border-radius: 8px;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */
+    max-width: 200px; /* Define a largura máxima */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona sombra */
 }
+
 
 /* Adiciona animação ao passar o mouse sobre os botões */
 #show-or-hide-snes:hover,
@@ -151,7 +191,20 @@ body {
     color: #CFCFD2; /* Cor do texto ao passar o mouse */
 }
 
+/* Media queries para ajustar o estilo em diferentes tamanhos de tela */
+@media screen and (max-width: 768px) {
+    .contain1, .contain2, .contain3, .contain4, .contain5 {
+        max-width: 90%; /* Reduz a largura máxima em telas menores */
+    }
 
+    #show-or-hide-snes,
+    #show-or-hide-md,
+    #show-or-hide-nes,
+    #show-or-hide-sms,
+    #show-or-hide-psone {
+        max-width: 150px; /* Reduz a largura máxima dos botões em telas menores */
+    }
+}
 
 /* Use para copiar e personalizar os botões
 de acordo com as cores dos videogames */
@@ -165,10 +218,12 @@ de acordo com as cores dos videogames */
 /*  text-decoration: none; /* Remove sublinhado do texto */
 /*  display: inline-block; /* Exibe o botão como um bloco */
 /*  font-size: 16px; /* Tamanho da fonte */
-/*  margin: 4px 2px; /* Margem externa do botão */
+/*  margin: 10px auto; /* Centralizar e adicionar margem superior e inferior */
 /*  cursor: pointer; /* Altera o cursor para indicar que o botão é clicável */
 /*  transition: background-color 0.3s, color 0.3s; /* Animação de transição */
+/*  max-width: 200px; /* Define a largura máxima */
 /*  border-radius: 8px; /* Borda não tão arredondada */
+/*  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona sombra */
 /*} */
 
 .bodyimg {
@@ -186,6 +241,7 @@ de acordo com as cores dos videogames */
 }
 
 .footer-info {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
     background-color: #854CD6;
     border-radius: 8px;
     margin-top: 25px;
@@ -196,16 +252,19 @@ de acordo com as cores dos videogames */
 .footer-info p {
     margin-bottom: 10px;
     color: #FFFF00;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao texto */
 }
 
 .colaboration {
     color: #FFFF00;
+    
 }
 
 .colaboration li {
     display: inline-block;
     margin-right: 10px;
     margin-left: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao texto */
 }
 
 .colaboration li a {
