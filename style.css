@@ -33,6 +33,7 @@ body {
 
 /* Estilo para o campo de busca */
 #input-game {
+    margin: 7px; /* Espaçamento externo */
     padding: 8px; /* Espaçamento interno */
     font-size: 16px; /* Tamanho da fonte */
     border: 1px solid #ccc; /* Borda sólida */
@@ -52,7 +53,7 @@ body {
     border-radius: 4px; /* Borda arredondada */
     cursor: pointer; /* Cursor de apontar */
     transition: background-color 0.3s; /* Transição suave */
-    margin-left: 5px;
+    margin: 3px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
 }
 
