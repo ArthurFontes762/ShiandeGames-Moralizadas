@@ -1,67 +1,51 @@
 // Super Nintendo
 var btn = document.querySelector('#show-or-hide-snes')
-var container = document.querySelector('.contain1')
+var container = document.querySelector('.containsnes')
 
-// Evento para o botão ser clicado (mostrar ou ocultar)
-
-btn.addEventListener('click', function() {
-
-    if(container.style.display === 'block') {
-        container.style.display = 'none';
-    } else {
-        container.style.display = 'block';
-    }
-
+// Adiciona um ouvinte de evento para o botão
+document.getElementById("show-or-hide-snes").addEventListener("click", function() {
+    // Abre uma nova janela do navegador com a página relacionada ao Super Nintendo
+    window.open("paginas/pagsnes/pagsnes.html", "_blank");
 });
 
 // Mega Drive
 var btnMega = document.querySelector('#show-or-hide-md')
-var containerMega = document.querySelector('.contain2')
+var containerMega = document.querySelector('.containmd')
 
-// Evento para o botão ser clicado (mostrar ou ocultar)
-
-btnMega.addEventListener('click', function() {
-    if(containerMega.style.display === 'block') {
-        containerMega.style.display = 'none';
-    } else {
-        containerMega.style.display = 'block';
-    }
+// Adiciona um ouvinte de evento para o botão
+document.getElementById("show-or-hide-md").addEventListener("click", function() {
+    // Abre uma nova janela do navegador com a página relacionada ao Super Nintendo
+    window.open("paginas/pagmd/pagmd.html", "_blank");
 });
 
 // Nintendo
 var btnNES = document.querySelector('#show-or-hide-nes');
-var containerNES = document.querySelector('.contain3');
+var containerNES = document.querySelector('.containnes');
 
-btnNES.addEventListener('click', function() {
-    if (containerNES.style.display === 'block') {
-        containerNES.style.display = 'none';
-    } else {
-        containerNES.style.display = 'block';
-    }
+// Adiciona um ouvinte de evento para o botão
+document.getElementById("show-or-hide-nes").addEventListener("click", function() {
+    // Abre uma nova janela do navegador com a página relacionada ao Super Nintendo
+    window.open("paginas/pagnes/pagnes.html", "_blank");
 });
 
 // Sega Master System
 var btnSMS = document.querySelector('#show-or-hide-sms');
 var containerSMS = document.querySelector('.contain4');
 
-btnSMS.addEventListener('click', function() {
-    if (containerSMS.style.display === 'block') {
-        containerSMS.style.display = 'none';
-    } else {
-        containerSMS.style.display = 'block';
-    }
+// Adiciona um ouvinte de evento para o botão
+document.getElementById("show-or-hide-sms").addEventListener("click", function() {
+    // Abre uma nova janela do navegador com a página relacionada ao Super Nintendo
+    window.open("paginas/pagsms/pagsms.html", "_blank");
 });
 
 // Playstation
 var btnPSOne = document.querySelector('#show-or-hide-psone');
 var containerPSOne = document.querySelector('.contain5');
 
-btnPSOne.addEventListener('click', function() {
-    if (containerPSOne.style.display === 'block') {
-        containerPSOne.style.display = 'none';
-    } else {
-        containerPSOne.style.display = 'block';
-    }
+// Adiciona um ouvinte de evento para o botão
+document.getElementById("show-or-hide-psone").addEventListener("click", function() {
+    // Abre uma nova janela do navegador com a página relacionada ao Super Nintendo
+    window.open("paginas/pagpsone/pagpsone.html", "_blank");
 });
 
 // Espaço para criar evento de lista de jogos

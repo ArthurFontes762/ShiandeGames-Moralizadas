@@ -5,46 +5,47 @@ body {
 }
 
 /* Estilo para a barra de navegação */
-.navbar {
-    background-color: #854CD6; /* Cor de fundo */
-    padding: 10px; /* Espaçamento interno */
-    border-radius: 4px;
-    display: flex; /* Usa flexbox */
-    justify-content: space-between; /* Alinha os itens */
-    align-items: center; /* Alinha os itens verticalmente */
-    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha em telas menores */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+.navbar-container {
+    background-color: #854CD6;
+    background-size: 10px;
+    border-radius: 10px;
+    margin-left: 25%; /* Margem esquerda responsiva */
+    margin-right: 25%; /* Margem direita responsiva */
+    padding: 20px; /* Espaçamento interno */
+    display: flex; /* Ativa o layout flexível */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
 }
 
-/* Estilo para o título e para o logotipo */
+
+/* Estilo para o logotipo */
+.title img {
+    margin-right: 5%; /* Margem direita responsiva */
+    border-radius: 20px;
+    width: 200px; /* Define a largura da imagem */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona sombra */
+}
+
+/* Estilo para o título */
 .title {
     display: flex; /* Usa flexbox para alinhar os itens */
     align-items: center; /* Alinha os itens verticalmente */
-    flex-grow: 1; /* Permite que o título cresça para preencher o espaço restante */
-    text-align: center;
 }
 
-.title h1 {
-    color: #FFFF00; /* Cor do texto */
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao texto */
-}
-
-
-/* Estilo para o campo de busca */
+/* Estilo para o campo de busca e botão */
 #input-game {
-    margin: 7px; /* Espaçamento externo */
     padding: 8px; /* Espaçamento interno */
     font-size: 16px; /* Tamanho da fonte */
     border: 1px solid #ccc; /* Borda sólida */
     border-radius: 4px; /* Borda arredondada */
-    width: 100%; /* Largura total */
     max-width: 300px; /* Largura máxima */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona sombra */
 }
 
-/* Estilo para o botão de busca */
 #btn-moralize {
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
     padding: 8px 16px; /* Espaçamento interno */
     font-size: 16px; /* Tamanho da fonte */
     background-color: #4CAF50; /* Cor de fundo */
@@ -53,8 +54,7 @@ body {
     border-radius: 4px; /* Borda arredondada */
     cursor: pointer; /* Cursor de apontar */
     transition: background-color 0.3s; /* Transição suave */
-    margin: 3px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona sombra */
 }
 
 /* Estilo para o botão de busca quando passa o mouse sobre ele */
@@ -62,42 +62,47 @@ body {
     background-color: #45a049; /* Cor de fundo ao passar o mouse */
 }
 
-
-.contain1, .contain2, .contain3, .contain4, .contain5 {
-    contain: content;
-    background: grey;
-    color: #FFF;
-    padding: 15px;
-    text-align: center;
-    display: none;
-    margin: 0 auto; /* Centralizar o conteúdo horizontalmente */
-    max-width: 80%; /* Define a largura máxima */
-    border-radius: 15px; /* Adiciona bordas arredondadas */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona sombra */
-    animation: fadeIn 0.5s ease forwards; /* Adiciona animação de fade in */
+/* Estilo para tornar a barra de navegação responsiva */
+@media only screen and (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column; /* Altera a direção do layout para coluna */
+        align-items: flex-start; /* Alinha os itens à esquerda */
+        padding: 10px; /* Reduz o padding */
+        margin: 10%;
+    }
+    .title img {
+        align-items: flex-start;
+        flex-direction: column;
+        width: 100px; /* Reduz a largura da imagem */
+    }
+    #input-game {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 5px;
+        width: 150px;
+    }
+    #btn-moralize {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 5px;
+        width: 100px; /* Define a largura máxima como 100px */
+    }
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
 
 /* Botões SNES */
 #show-or-hide-snes {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao texto, ajuste conforme necessário */
-    background-color: #CFCFD2;
+    background-color: #cfcfd2a6;
     border: 1px solid #5C3994; /* Borda mais sólida */
-    color: #5C3994;
-    padding: 5px 15px;
+    color: #5c3994;
+    padding: 1px 1px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 10px auto; /* Centralizar e adicionar margem superior e inferior */
+    margin-left: 8px;
+    margin: 8px auto; /* Centralizar e adicionar margem superior e inferior */
     cursor: pointer;
     border-radius: 8px; /* Menos arredondado */
     transition: background-color 0.3s, color 0.3s; /* Transição suave */
@@ -105,23 +110,37 @@ body {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona sombra */
 }
 
-/* Botões Mega Drive */
+#show-or-hide-snes img {
+    vertical-align: middle; /* Alinha verticalmente a imagem com o texto */
+    margin-right: 5px; /* Adiciona espaço à direita da imagem */
+    max-width: 120px; /* Define a largura máxima da imagem */
+}
+
+
+/* Botões Mega Drive/Genesis */
 #show-or-hide-md {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao texto, ajuste conforme necessário */
-    background-color: #212121;
-    border: 1px solid #A0A0A0;
-    color: #A0A0A0;
-    padding: 5px 15px;
+    background-color: #a0a0a0;
+    border: 1px solid #3d3d3d;
+    color: #3d3d3d;
+    padding: 1px 1px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 10px auto; /* Centralizar e adicionar margem superior e inferior */
+    margin: 5px auto; /* Centralizar e adicionar margem superior e inferior */
+    margin-left: 8px;
     cursor: pointer;
     border-radius: 8px;
     transition: background-color 0.3s, color 0.3s; /* Transição suave */
     max-width: 200px; /* Define a largura máxima */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona sombra */
+}
+
+#show-or-hide-md img {
+    vertical-align: middle; /* Alinha verticalmente a imagem com o texto */
+    margin-right: 5px; /* Adiciona espaço à direita da imagem */
+    max-width: 120px; /* Define a largura máxima da imagem */
 }
 
 /* Botões Nintendo */
@@ -130,31 +149,39 @@ body {
     background-color: #E4000F;
     border: 1px solid #E9E2CF;
     color: #E9E2CF;
-    padding: 5px 15px;
+    padding: 1px 1px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 10px auto; /* Centralizar e adicionar margem superior e inferior */
+    margin: 5px auto; /* Centralizar e adicionar margem superior e inferior */
+    margin-left: 8px;
     cursor: pointer;
     border-radius: 8px;
     transition: background-color 0.3s, color 0.3s; /* Transição suave */
     max-width: 200px; /* Define a largura máxima */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona sombra */
+}
+
+#show-or-hide-nes img {
+    vertical-align: middle; /* Alinha verticalmente a imagem com o texto */
+    margin-right: 5px; /* Adiciona espaço à direita da imagem */
+    max-width: 120px; /* Define a largura máxima da imagem */
 }
 
 /* Botões Sega Master System */
 #show-or-hide-sms {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao texto, ajuste conforme necessário */
-    background-color: #05040A;
+    background-color: #a0a0a0;
     border: 1px solid #C2C6C9;
-    color: #C2C6C9;
-    padding: 5px 15px;
+    color: #3d3d3d;
+    padding: 1px 1px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 10px auto; /* Centralizar e adicionar margem superior e inferior */
+    margin: 5px auto; /* Centralizar e adicionar margem superior e inferior */
+    margin-left: 8px;
     cursor: pointer;
     border-radius: 8px;
     transition: background-color 0.3s, color 0.3s; /* Transição suave */
@@ -162,23 +189,36 @@ body {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona sombra */
 }
 
+#show-or-hide-sms img {
+    vertical-align: middle; /* Alinha verticalmente a imagem com o texto */
+    margin-right: 5px; /* Adiciona espaço à direita da imagem */
+    max-width: 120px; /* Define a largura máxima da imagem */
+}
+
 /* Botões Playstation */
 #show-or-hide-psone {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao texto, ajuste conforme necessário */
-    background-color: #ADA9A8;
-    border: 1px solid #484344;
-    color: #484344;
-    padding: 5px 15px;
+    background-color: #3b3434;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 10px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 10px auto; /* Centralizar e adicionar margem superior e inferior */
+    margin: 5px auto; /* Centralizar e adicionar margem superior e inferior */
+    margin-left: 8px;
     cursor: pointer;
     border-radius: 8px;
     transition: background-color 0.3s, color 0.3s; /* Transição suave */
     max-width: 200px; /* Define a largura máxima */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona sombra */
+}
+
+#show-or-hide-psone img {
+    vertical-align: middle; /* Alinha verticalmente a imagem com o texto */
+    margin-right: 5px; /* Adiciona espaço à direita da imagem */
+    max-width: 120px; /* Define a largura máxima da imagem */
 }
 
 
@@ -192,18 +232,31 @@ body {
     color: #CFCFD2; /* Cor do texto ao passar o mouse */
 }
 
-/* Media queries para ajustar o estilo em diferentes tamanhos de tela */
-@media screen and (max-width: 768px) {
-    .contain1, .contain2, .contain3, .contain4, .contain5 {
-        max-width: 90%; /* Reduz a largura máxima em telas menores */
+/* Media Query para tornar responsivo */
+@media only screen and (max-width: 768px) {
+    /* Botões SNES */
+    #show-or-hide-snes {
+        margin: 5px; /* Ajuste de margem para telas menores */
     }
 
-    #show-or-hide-snes,
-    #show-or-hide-md,
-    #show-or-hide-nes,
-    #show-or-hide-sms,
+    /* Botões Mega Drive/Genesis */
+    #show-or-hide-md {
+        margin: 5px; /* Ajuste de margem para telas menores */
+    }
+
+    /* Botões Nintendo */
+    #show-or-hide-nes {
+        margin: 5px; /* Ajuste de margem para telas menores */
+    }
+
+    /* Botões Sega Master System */
+    #show-or-hide-sms {
+        margin: 5px; /* Ajuste de margem para telas menores */
+    }
+
+    /* Botões Playstation */
     #show-or-hide-psone {
-        max-width: 150px; /* Reduz a largura máxima dos botões em telas menores */
+        margin: 5px; /* Ajuste de margem para telas menores */
     }
 }
 
